@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<br>
+<br>
+      <form method="get">
+         <input type="text" name="qidirish" placeholder="kitob nomini yozing ">\
+         <button type="submit"> Qidirish  </button>
+     </form>
+    <br>
+    <h1> Mualliflar ro'yhati </h1>
+    <br>
+    {%for i in mualliflar %}
+
+    <br>
+    <br>
+    <br>
+    <h2>{{i.id}}.<a href="/muallif/{{i.id}}"> {{i.ism}}</a> {{i.nom}}</h2> <a href="/muallif_ochir/{{i.id}}/"> <button>Ochirish</button></a>
+    {%endfor%}
+    <br>
+    <br>
+     <br>
+    <br>
+    <form action="/mualliflar/" method="post" >{% csrf_token %}
+        {{forma}}
+        <button type="submit"> Qo'shish </button>
+
+
+</body>
+</html>

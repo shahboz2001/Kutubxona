@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>  <br>
+    <h1>15</h1>
+    <h1>{{sahifa1.nom}}</h1>
+    {%for i in sahifa1%}
+    <br>
+    <br>
+    <h2>{{i.id}}: {{i.sahifa}}</h2> <a href="/sahifa_ochir/{{i.id}}/"> <button>Ochirish</button></a>
+    {%endfor%}
+
+</body>
+</html>

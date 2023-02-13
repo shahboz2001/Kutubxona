@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="POST">{%csrf_token%}
+    <label>ism</label>
+    <input type="text" name="i" value="{{muallif.ism}}">
+    <label>kurs: </label>
+    <input type="time" name="t" value="{{muallif.kurs}}">
+    <button type="submit"> saqlash </button>
+</form>
+<br>
+<br>
+<hr>
+<a href="/mualliflar/"><button>orqaga</button></a>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<br>
+<br>
+<br>
+<h2>Recordlar royhati </h2>
+{%for i in recordlar1%}
+<br>
+<br>
+<br>
+<h2> {{i.id}}.  {{i.telaba}}: kitobi {{i.kitob}}</h2>  <a href="/record_ochir/{{i.id}}/"> <button>Ochirish</button></a>
+{%endfor%}
+<br>
+  <form action="/recordlar/" method="post">{% csrf_token %}
+       {{forma}}
+        <button type="submit">Qo'shish</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{talaba.ism}}</title>
+</head>
+
+<body>
+<h1>talaba malumotini ozgartirish</h1>
+<br>
+<br>
+<br>
+<br>
+<form method="POST"> {%csrf_token%}
+    <label>ism</label>
+    <input type="text" name="i" value="{{talaba.ism}}">
+    <label>kurs: </label>
+    <input type="number" name="k" value="{{talaba.kurs}}">
+    <label>kitob_soni: </label>
+    <input type="number" name="k_s" value="{{talaba.kitoblar_soni}}">
+    <label>Bitiruvchi: </label>
+    {% if talaba.bitiruvchi == "ha" %}
+    <input type="checkbox" name="b" checked>
+    {% else %}
+    <input type="checkbox" name="b">
+    {% endif %}
+
+    <button type="submit"> saqlash </button>
+</form>
+<br>
+<br>
+
+    <a href="/talaba/"><button>orqaga</button></a>
+<br>
+<hr>
+</body>
+</html>

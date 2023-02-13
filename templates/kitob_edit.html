@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{kitob.nom}}</title>
+</head>
+<body>
+<h1>kitobnni ozgartirish </h1>
+<br>
+<br>
+<br>
+<br>
+<form  method="POST"> {%csrf_token%}
+    <label>kitob: </label>
+    <input type="text" name="n" value="{{kitob.nom}}" >
+    <label>sahifa: </label>
+    <input type="number" name="s" value="{{kitob.sahifa}}" >
+    <label>janri: </label>
+    <input type="text" name="j" value="{{kitob.janr}}" >
+    <select name="m">
+        {%for i in mualliflar%}
+        <option value="{{i.id}}"> {{i.ism}}</option>
+        {%endfor%}
+
+    </select>
+    <button type="submit"> Saqlash </button>
+</form>
+<br>
+<br>
+<a href="/kitoblar/"><button>orqaga</button></a>
+<br>
+<hr>
+</body>
+</html>

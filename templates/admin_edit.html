@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{admin.ism}}</title>
+</head>
+<body>
+<form method="POST">{%csrf_token%}
+    <label>ism</label>
+    <input type="text" name="i" value="{{admin.ism}}">
+    <label>kurs: </label>
+    <input type="time" name="t" value="{{admin.kurs}}">
+    <button type="submit"> saqlash </button>
+</form>
+<br>
+<br>
+<hr>
+<a href="/adminlar/"><button>orqaga</button></a>
+
+</body>
+</html>
